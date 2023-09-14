@@ -26,7 +26,7 @@ echo "Downloading Failback Client ISO"
 wget -O aws-failback-livecd-64bit.iso https://aws-elastic-disaster-recovery-$region_name.s3.amazonaws.com/latest/failback_livecd/aws-failback-livecd-64bit.iso
 
 echo "Mounting the Downloaded Failback Client ISO to /mnt"
-mount -v -o loop, rw $iso_name /mnt
+mount -v -w -o loop $iso_name /mnt
 if [ $? -eq 0 ]; then echo "Mounted successfully"; else  echo "$iso_name is not mounted"; exit 1; fi
 
 mkdir /squashfs /rootfs /secondery_root
