@@ -19,7 +19,7 @@ if [ -z "$region_name" -o -z "$disk_name" -o -z "$part_name" ]; then
     exit 1
 fi
 
-iso_name="/root/aws-failback-livecd-64bit.iso"
+iso_name="/drs/aws-failback-livecd-64bit.iso"
 
 
 echo "Downloading Failback Client ISO"
