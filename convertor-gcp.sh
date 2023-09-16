@@ -21,6 +21,7 @@ fi
 
 iso_name="/drs/aws-failback-livecd-64bit.iso"
 
+cd /drs
 
 echo "Downloading Failback Client ISO"
 wget -O aws-failback-livecd-64bit.iso https://aws-elastic-disaster-recovery-$region_name.s3.amazonaws.com/latest/failback_livecd/aws-failback-livecd-64bit.iso
