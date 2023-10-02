@@ -56,8 +56,8 @@ mount -v  -o bind  /dev /secondery_root/dev || { echo "mount /dev failed"; exit 
 echo "installing kernel"
 chroot /secondery_root/ rpm -ivh kernel-* --force || { echo "rpm installation inside chroot failed"; exit 1; }
 
-echo "generating grub2.cfg"
-chroot /secondery_root/ grub2-mkconfig -o /boot/grub2/grub.cfg || { echo "grub2.cfg creation inside chroot failed"; exit 1; }
-
 echo "installing grub"
 chroot /secondery_root/ grub2-install $disk_name || { echo "grub install inside chroot failed"; exit 1; }
+
+echo "generating grub2.cfg"
+chroot /secondery_root/ grub2-mkconfig -o /boot/grub2/grub.cfg || { echo "grub2.cfg creation inside chroot failed"; exit 1; }
